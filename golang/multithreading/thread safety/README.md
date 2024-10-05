@@ -3,15 +3,6 @@
 Код потокобезопасен, если он функционирует исправно при использовании его из нескольких потоков одновременно.
 В частности, он должен обеспечивать правильный доступ нескольких потоков к разделяемым данным.
 
-## INDEX:
-- [Проблема DataRace](../multithreading/thread%20safety#%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80-%D0%BF%D1%80%D0%BE%D0%B1%D0%BB%D0%B5%D0%BC%D1%8B)
-- [Пакет sync](../multithreading/thread%20safety#%D0%BF%D1%80%D0%B8%D0%BC%D0%B8%D1%82%D0%B8%D0%B2%D1%8B-sync)
-    - [type Mutex](../multithreading/thread%20safety#syncmutex--mutually-exclusive-lock)
-    - [type Once](../multithreading/thread%20safety#synconce)
-    - [type WaitGroup](../multithreading/thread%20safety#syncwaitgroup)
-    - [type Map](../multithreading/thread%20safety#syncmap)
-- [Пакет atomic]()
-
 ## Пример проблемы DataRace
 Гонка горутин иногда приводит к изменениям состояния любого значения, хранящегося в адресе памяти без какого-либо соблюдения порядка.
 
